@@ -23,7 +23,6 @@ class GridItemRemoteDataSourceImpl implements GridItemRemoteDataSource {
     final json = jsonDecode(randomJson) as Iterable<dynamic>;
     final serializer = GridItemSerializer();
 
-    // ignore: unnecessary_lambdas
     return json
         .map((dynamic e) => serializer.from(e as Map<String, dynamic>))
         .toList();
