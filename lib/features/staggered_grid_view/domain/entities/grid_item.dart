@@ -1,5 +1,8 @@
+import 'package:custom_staggered_grid/features/staggered_grid_view/domain/entities/feature.dart';
+
 class GridItem {
   GridItem({
+    required this.feature,
     required this.title,
     required this.backgroundColor,
     required this.iconUrl,
@@ -8,6 +11,7 @@ class GridItem {
     required this.mainAxisSize,
   });
 
+  final Feature feature;
   final String title;
   final String backgroundColor;
   final String iconUrl;

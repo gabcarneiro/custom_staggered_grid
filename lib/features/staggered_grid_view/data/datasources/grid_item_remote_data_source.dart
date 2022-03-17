@@ -34,6 +34,7 @@ const mockJson1 = '''
 [
   {
     "title": "Feature A",
+    "feature": "featureA",
     "backgroundColor": "",
     "iconUrl": "",
     "backgroundImage": "",
@@ -42,6 +43,7 @@ const mockJson1 = '''
   },
   {
     "title": "Feature B",
+    "feature": "featureB",
     "backgroundColor": "",
     "iconUrl": "",
     "backgroundImage": "",
@@ -50,6 +52,7 @@ const mockJson1 = '''
   },
     {
     "title": "Feature C",
+    "feature": "featureC",
     "backgroundColor": "",
     "iconUrl": "",
     "backgroundImage": "",
@@ -62,6 +65,7 @@ const mockJson2 = '''
 [
   {
     "title": "Feature A",
+    "feature": "featureA",
     "backgroundColor": "",
     "iconUrl": "",
     "backgroundImage": "",
@@ -70,6 +74,7 @@ const mockJson2 = '''
   },
   {
     "title": "Feature B",
+    "feature": "featureB",
     "backgroundColor": "",
     "iconUrl": "",
     "backgroundImage": "",
@@ -78,6 +83,7 @@ const mockJson2 = '''
   },
     {
     "title": "Feature C",
+    "feature": "featureC",
     "backgroundColor": "",
     "iconUrl": "",
     "backgroundImage": "",
@@ -90,6 +96,7 @@ const mockJson3 = '''
 [
   {
     "title": "Feature A",
+    "feature": "featureA",
     "backgroundColor": "",
     "iconUrl": "",
     "backgroundImage": "",
@@ -98,6 +105,7 @@ const mockJson3 = '''
   },
   {
     "title": "Feature B",
+    "feature": "featureB",
     "backgroundColor": "",
     "iconUrl": "",
     "backgroundImage": "",
@@ -106,6 +114,7 @@ const mockJson3 = '''
   },
     {
     "title": "Feature C",
+    "feature": "featureC",
     "backgroundColor": "",
     "iconUrl": "",
     "backgroundImage": "",

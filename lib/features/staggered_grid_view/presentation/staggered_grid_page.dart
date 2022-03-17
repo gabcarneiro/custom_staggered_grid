@@ -1,6 +1,8 @@
+import 'package:custom_staggered_grid/features/staggered_grid_view/domain/entities/feature.dart';
 import 'package:custom_staggered_grid/features/staggered_grid_view/domain/entities/grid_item.dart';
 import 'package:custom_staggered_grid/features/staggered_grid_view/presentation/cubit/staggered_grid_cubit.dart';
 import 'package:custom_staggered_grid/shared/dependency_injector.dart';
+import 'package:custom_staggered_grid/shared/presentation/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -60,25 +62,40 @@ class _StaggeredGridCell extends StatelessWidget {
 
   final GridItem gridItem;
 
+  void _navigateToFeature(BuildContext context) {
+    final routes = {
+      Feature.featureA: Routes.featureA,
+      Feature.featureB: Routes.featureB,
+      Feature.featureC: Routes.featureC,
+    };
+
+    final routeName = routes[gridItem.feature]!;
+
+    Navigator.of(context).pushNamed(routeName);
+  }
+
   @override
   Widget build(BuildContext context) {
     return StaggeredGridTile.count(
       crossAxisCellCount: gridItem.crossAxisSize,
       mainAxisCellCount: gridItem.mainAxisSize,
-      child: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(8),
-          child: Align(
-            alignment: Alignment.centerLeft,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(gridItem.title),
-              ],
+      child: GestureDetector(
+        onTap: () => _navigateToFeature(context),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(8),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(gridItem.title),
+                ],
+              ),
             ),
           ),
         ),
